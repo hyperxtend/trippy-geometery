@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Octagon from '../pages/octagon';
 import Pentagon from '../pages/pentagon';
@@ -9,12 +9,12 @@ import PageNotFound from '../pages/page-not-found';
 import { octagon, pentagon, square } from './urls';
 
 const NavigationRoutes = () => (
-  <Switch>
+  <Routes>
     <Route path={octagon} component={Octagon} />
     <Route path={pentagon} component={Pentagon} />
     <Route path={square} component={Square} />
     <Route component={PageNotFound} />
-  </Switch>
+  </Routes>
 );
 
 export default NavigationRoutes;
